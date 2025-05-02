@@ -2,6 +2,95 @@
 // zurb.com/ink/
 // Licensed under MIT Open Source
 @use "sass:math";
+@use "sass:color";
+
+/// Primary color for interactive components like links and buttons.
+/// @type Color
+$primary-color: #2199e8 !default;
+
+/// Secondary color, used with components that support the `.secondary` class.
+/// @type Color
+$secondary-color: #777777 !default;
+
+/// Color to indicate a positive status or action, used with the `.success` class.
+/// @type Color
+$success-color: #3adb76 !default;
+
+/// Color to indicate a caution status or action, used with the `.warning` class.
+/// @type Color
+$warning-color: #ffae00 !default;
+
+/// Color to indicate a negative status or action, used with the `.alert` class.
+/// @type Color
+$alert-color: #ec5840 !default;
+
+/// Color used for light gray UI items within Foundation.
+/// @type Color
+$light-gray: #f3f3f3 !default;
+
+/// Color used for medium gray UI items within Foundation.
+/// @type Color
+$medium-gray: #cacaca !default;
+
+/// Color used for dark gray UI items within Foundation.
+/// @type Color
+$dark-gray: #8a8a8a !default;
+
+/// Color used for black ui items within Foundation
+/// @type Color
+$black: #0a0a0a !default;
+
+/// Color used for white ui items within Foundation
+/// @type Color
+$white: #fefefe !default;
+
+/// Color used code.
+/// @type Color
+$pre-color: #ff6908 !default;
+
+/// Width of the container.
+/// @type Number
+$global-width: 580px !default;
+
+/// Width of the container on small screens.
+/// @type Length
+$global-width-small: 95% !default;
+
+/// Gutter for grid elements.
+/// @type length
+$global-gutter: 16px !default;
+
+/// Gutter for grid elements on small screens.
+/// @type length
+$global-gutter-small: $global-gutter !default;
+
+/// Body background color.
+/// @type Length
+$body-background: $light-gray !default;
+
+/// Color for the container background
+/// @type Color
+$container-background: $white !default;
+
+/// Global padding.
+/// @type Number
+$global-padding: 16px !default;
+
+/// Global margin. Margin requires a capital 'M' to workin Outlook.com
+/// @type Number
+$global-margin: 16px !default;
+
+/// Global radius of radius-corners.
+/// @type Number
+$global-radius: 3px !default;
+
+/// Global rounded radius of rounded-corners.
+/// @type Number
+$global-rounded: 500px !default;
+
+/// Global media query to switch from desktop to mobile styles.
+/// @type String
+$global-breakpoint: $global-width + $global-gutter !default;
 
 ////
 /// @group typography
@@ -45,27 +134,27 @@ $header-font-weight: $global-font-weight !default;
 
 /// Font size of `<h1>` elements.
 /// @type Number
-$h1-font-size: floor($global-font-size * 2.125) !default;
+$h1-font-size: math.floor($global-font-size * 2.125) !default;
 
 /// Font size of `<h2>` elements.
 /// @type Number
-$h2-font-size: floor($global-font-size * 1.875) !default;
+$h2-font-size: math.floor($global-font-size * 1.875) !default;
 
 /// Font size of `<h3>` elements.
 /// @type Number
-$h3-font-size: floor($global-font-size * 1.75) !default;
+$h3-font-size: math.floor($global-font-size * 1.75) !default;
 
 /// Font size of `<h4>` elements.
 /// @type Number
-$h4-font-size: floor($global-font-size * 1.5) !default;
+$h4-font-size: math.floor($global-font-size * 1.5) !default;
 
 /// Font size of `<h5>` elements.
 /// @type Number
-$h5-font-size: floor($global-font-size * 1.2) !default;
+$h5-font-size: math.floor($global-font-size * 1.2) !default;
 
 /// Font size of `<h6>` elements.
 /// @type Number
-$h6-font-size: floor($global-font-size * 1.125) !default;
+$h6-font-size: math.floor($global-font-size * 1.125) !default;
 
 /// Margin bottom of `<h1>` through `<h6>` elements.
 /// @type Number
@@ -149,7 +238,7 @@ $anchor-color-visited: $anchor-color !default;
 
 /// Text color of anchors on hover.
 /// @type Color
-$anchor-color-hover: color.adjust($primary-color, $lightness: -10%%) !default;
+$anchor-color-hover: color.adjust($primary-color, $lightness: -10%) !default;
 
 /// Text color of active anchors.
 /// @type Color

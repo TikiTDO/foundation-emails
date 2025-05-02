@@ -10,3 +10,6 @@ inky
 .download
 foundation-emails.zip
 bower_components
+.yarn
+yarn
+.yarnrc.yml

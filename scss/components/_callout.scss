@@ -6,6 +6,96 @@
 /// @group callout
 ////
 
+@use "sass:color";
+
+/// Primary color for interactive components like links and buttons.
+/// @type Color
+$primary-color: #2199e8 !default;
+
+/// Secondary color, used with components that support the `.secondary` class.
+/// @type Color
+$secondary-color: #777777 !default;
+
+/// Color to indicate a positive status or action, used with the `.success` class.
+/// @type Color
+$success-color: #3adb76 !default;
+
+/// Color to indicate a caution status or action, used with the `.warning` class.
+/// @type Color
+$warning-color: #ffae00 !default;
+
+/// Color to indicate a negative status or action, used with the `.alert` class.
+/// @type Color
+$alert-color: #ec5840 !default;
+
+/// Color used for light gray UI items within Foundation.
+/// @type Color
+$light-gray: #f3f3f3 !default;
+
+/// Color used for medium gray UI items within Foundation.
+/// @type Color
+$medium-gray: #cacaca !default;
+
+/// Color used for dark gray UI items within Foundation.
+/// @type Color
+$dark-gray: #8a8a8a !default;
+
+/// Color used for black ui items within Foundation
+/// @type Color
+$black: #0a0a0a !default;
+
+/// Color used for white ui items within Foundation
+/// @type Color
+$white: #fefefe !default;
+
+/// Color used code.
+/// @type Color
+$pre-color: #ff6908 !default;
+
+/// Width of the container.
+/// @type Number
+$global-width: 580px !default;
+
+/// Width of the container on small screens.
+/// @type Length
+$global-width-small: 95% !default;
+
+/// Gutter for grid elements.
+/// @type length
+$global-gutter: 16px !default;
+
+/// Gutter for grid elements on small screens.
+/// @type length
+$global-gutter-small: $global-gutter !default;
+
+/// Body background color.
+/// @type Length
+$body-background: $light-gray !default;
+
+/// Color for the container background
+/// @type Color
+$container-background: $white !default;
+
+/// Global padding.
+/// @type Number
+$global-padding: 16px !default;
+
+/// Global margin. Margin requires a capital 'M' to workin Outlook.com
+/// @type Number
+$global-margin: 16px !default;
+
+/// Global radius of radius-corners.
+/// @type Number
+$global-radius: 3px !default;
+
+/// Global rounded radius of rounded-corners.
+/// @type Number
+$global-rounded: 500px !default;
+
+/// Global media query to switch from desktop to mobile styles.
+/// @type String
+$global-breakpoint: $global-width + $global-gutter !default;
+
 /// Background color of a callout.
 /// @type Color
 $callout-background: $white !default;
@@ -28,27 +118,27 @@ $callout-margin-bottom: $global-margin !default;
 
 /// Border around a callout.
 /// @type Border
-$callout-border: 1px solid color.adjust($callout-background, $lightness: -20%%) !default;
+$callout-border: 1px solid color.adjust($callout-background, $lightness: -20%) !default;
 
 /// Border around a callout with the `.primary` class.
 /// @type Border
-$callout-border-primary: 1px solid color.adjust($primary-color, $lightness: -20%%) !default;
+$callout-border-primary: 1px solid color.adjust($primary-color, $lightness: -20%) !default;
 
 /// Border around a callout with the `.secondary` class.
 /// @type Border
-$callout-border-secondary: 1px solid color.adjust($secondary-color, $lightness: -20%%) !default;
+$callout-border-secondary: 1px solid color.adjust($secondary-color, $lightness: -20%) !default;
 
 /// Border around a callout with the `.success` class.
 /// @type Border
-$callout-border-success: 1px solid color.adjust($success-color, $lightness: -20%%) !default;
+$callout-border-success: 1px solid color.adjust($success-color, $lightness: -20%) !default;
 
 /// Border around a callout with the `.warning` class.
 /// @type Border
-$callout-border-warning: 1px solid color.adjust($warning-color, $lightness: -20%%) !default;
+$callout-border-warning: 1px solid color.adjust($warning-color, $lightness: -20%) !default;
 
 /// Border around a callout with the `.alert` class.
 /// @type Border
-$callout-border-alert: 1px solid color.adjust($alert-color, $lightness: -20%%) !default;
+$callout-border-alert: 1px solid color.adjust($alert-color, $lightness: -20%) !default;
 
 table.callout {
   margin-bottom: $callout-margin-bottom;
@@ -62,31 +152,31 @@ th.callout-inner {
   background: $callout-background;
 
   &.primary {
-    background: scale-color($primary-color, $lightness: $callout-background-fade);
+    background: color.scale($primary-color, $lightness: $callout-background-fade);
     border: $callout-border-primary;
     color: $black;
   }
 
   &.secondary {
-    background: scale-color($secondary-color, $lightness: $callout-background-fade);
+    background: color.scale($secondary-color, $lightness: $callout-background-fade);
     border: $callout-border-secondary;
     color: $black;
   }
 
   &.success {
-    background: scale-color($success-color, $lightness: $callout-background-fade);
+    background: color.scale($success-color, $lightness: $callout-background-fade);
     border: $callout-border-success;
     color: $black;
   }
 
   &.warning {
-    background: scale-color($warning-color, $lightness: $callout-background-fade);
+    background: color.scale($warning-color, $lightness: $callout-background-fade);
     border: $callout-border-warning;
     color: $black;
   }
 
   &.alert {
-    background: scale-color($alert-color, $lightness: $callout-background-fade);
+    background: color.scale($alert-color, $lightness: $callout-background-fade);
     border: $callout-border-alert;
     color: $black;
   }

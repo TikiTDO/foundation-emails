@@ -5,26 +5,34 @@ var panini = require('panini');
 var supercollider = require('supercollider');
 var rimraf = require('rimraf');
 var browser = require('browser-sync');
-var foundationDocs = require('foundation-docs');
 var octophant = require('octophant');
 var inky = require('inky');
 var siphon = require('siphon-media-query');
 var lazypipe = require('lazypipe');
 var fs = require('fs');
 var yargs = require('yargs');
-var sass = require('gulp-sass');
+
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 
-sass.compiler = require('sass');
+var marked = require('marked');
+var handlebars = require('handlebars');
+
+
+var dartSass = require('sass');
+var gulpSass = require('gulp-sass');
+var sass = gulpSass(dartSass);
 
 // Configuration for the documentation generator
+
+// Default configuration to replace foundationDocs
+
 supercollider
   .config({
-    template: foundationDocs.componentTemplate,
-    marked: foundationDocs.marked,
-    handlebars: foundationDocs.handlebars,
+    template: 'docs/template.html',
+    marked: marked,
+    handlebars: handlebars,
     keepFm: true,
     quiet: false,
     pageRoot: 'docs/pages',
@@ -82,7 +90,7 @@ gulp.task('html', function() {
 // Compiles documentation-specific CSS
 gulp.task('sass:docs', function() {
   return gulp.src('docs/assets/scss/docs.scss')
-    .pipe(sass.sync({ includePaths: [process.cwd()] }).on('error', sass.logError))
+    .pipe(sass({ includePaths: [process.cwd()] }).on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('_build/assets/css'));
 });
@@ -90,7 +98,7 @@ gulp.task('sass:docs', function() {
 // Compiles Foundation-specific CSS
 gulp.task('sass:foundation', function() {
   return gulp.src('scss/foundation-emails.scss')
-    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('_build/assets/css'));
 });
 
