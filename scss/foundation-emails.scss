@@ -2,21 +2,20 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
-@use
-  'util/util',
-  'global',
-  'components/normalize',
-  'grid/grid',
-  'grid/block-grid',
-  'components/alignment',
-  'components/visibility',
-  'components/typography',
-  'components/button',
-  'components/callout',
-  'components/thumbnail',
-  'components/menu',
-  'components/outlook-first',
-  'components/media-query';
+@use 'util/util';
+@use 'global';
+@use 'components/normalize';
+@use 'grid/grid';
+@use 'grid/block-grid';
+@use 'components/alignment';
+@use 'components/visibility';
+@use 'components/typography';
+@use 'components/button';
+@use 'components/callout';
+@use 'components/thumbnail';
+@use 'components/menu';
+@use 'components/outlook-first';
+@use 'components/media-query';
 
 
 
