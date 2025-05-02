@@ -25,7 +25,7 @@ Foundation for Emails (previously known as Ink) is a framework for creating resp
   ```scss
   // app/assets/stylesheets/your_emails_stylesheet.scss
 
-  @import "foundation-emails";
+  @use "foundation-emails";
   ```
 
 ## License

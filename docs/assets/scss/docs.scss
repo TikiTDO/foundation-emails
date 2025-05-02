@@ -16,17 +16,17 @@ $foundation-palette: (
   alert: #ec5840,
 );
 
-@import 'node_modules/foundation-sites/scss/foundation';
-@import 'node_modules/motion-ui/src/motion-ui';
+@use 'node_modules/foundation-sites/scss/foundation';
+@use 'node_modules/motion-ui/src/motion-ui';
 
 @include foundation-everything;
 @include motion-ui-transitions;
 
-@import 'node_modules/foundation-docs/scss/foundation-docs';
+@use 'node_modules/foundation-docs/scss/foundation-docs';
 
-@import 'code';
-@import 'compatibility';
-@import 'course-callout';
+@use 'code';
+@use 'compatibility';
+@use 'course-callout';
 
 $topbar-background: #2c3840;
 $topbar-hover-color: lighten($topbar-background, 10%);
@@ -79,13 +79,13 @@ $topbar-hover-color: lighten($topbar-background, 10%);
   }
 }
 
-.marketing-topbar .menu a:hover:not(.button), 
+.marketing-topbar .menu a:hover:not(.button),
 .marketing-topbar .menu a:focus {
   background: $topbar-hover-color;
 }
 
 .marketing-topbar .menu .topbar-title a {
-  &:hover, 
+  &:hover,
   &:focus {
     background: $topbar-background;
   }

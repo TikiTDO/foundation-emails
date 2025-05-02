@@ -51,7 +51,7 @@ Run `npm run build` to do a full email inlining process.
   ```scss
   // app/assets/stylesheets/your_emails_stylesheet.scss
 
-  @import "foundation-emails";
+  @use "foundation-emails";
   ```
 
 Adding Inky's templating capabilities to Rails is easy thanks to the [**inky-rb**](https://github.com/zurb/inky-rb) gem, which bundles `foundation_emails` by default.
