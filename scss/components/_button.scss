@@ -172,7 +172,7 @@ table.button:visited,
 table.button:active {
   table {
     td {
-      background: darken($button-background, 10%);
+      background: color.adjust($button-background, $lightness: -10%%);
       color: $button-color;
     }
   }
@@ -183,7 +183,7 @@ table.button:visited,
 table.button:active {
   table {
     a {
-      border: 0 solid darken($button-background, 10%);
+      border: 0 solid color.adjust($button-background, $lightness: -10%%);
     }
   }
 }
@@ -206,12 +206,12 @@ table.button.secondary {
 table.button.secondary:hover {
   table {
     td {
-      background: lighten($secondary-color, 10%);
+      background: color.adjust($secondary-color, $lightness: 10%%);
       color: $button-color;
     }
 
     a {
-      border: 0 solid lighten($secondary-color, 10%);
+      border: 0 solid color.adjust($secondary-color, $lightness: 10%%);
     }
   }
 }
@@ -256,11 +256,11 @@ table.button.success {
 table.button.success:hover {
   table {
     td {
-      background: darken($success-color, 10%);
+      background: color.adjust($success-color, $lightness: -10%%);
     }
 
     a {
-      border: 0 solid darken($success-color, 10%);
+      border: 0 solid color.adjust($success-color, $lightness: -10%%);
     }
   }
 }
@@ -281,11 +281,11 @@ table.button.alert {
 table.button.alert:hover {
   table {
     td {
-      background: darken($alert-color, 10%);
+      background: color.adjust($alert-color, $lightness: -10%%);
     }
 
     a {
-      border: 0 solid darken($alert-color, 10%);
+      border: 0 solid color.adjust($alert-color, $lightness: -10%%);
     }
   }
 }
@@ -306,11 +306,11 @@ table.button.warning {
 table.button.warning:hover {
   table {
     td {
-      background: darken($warning-color, 10%);
+      background: color.adjust($warning-color, $lightness: -10%%);
     }
 
     a {
-      border: 0px solid darken($warning-color, 10%);
+      border: 0px solid color.adjust($warning-color, $lightness: -10%%);
     }
   }
 }
